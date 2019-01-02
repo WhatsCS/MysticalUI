@@ -1,12 +1,19 @@
 import React from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
+import { AppBar, Toolbar, Typography, IconButton, Icon, Button } from "./Imports";
 
 export default function NavMenu() {
   return (
     <div className="NavigationMenu">
       <AppBar>
-        <Toolbar />
+        <Toolbar>
+          <IconButton color="secondary">
+            <Icon>home</Icon>
+          </IconButton>
+          <Typography variant="h6" color="inherit">
+            MysticalUI
+          </Typography>
+          <Button>Login</Button>
+        </Toolbar>
       </AppBar>
     </div>
   );
