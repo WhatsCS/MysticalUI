@@ -7,32 +7,34 @@ import React, { Component } from "react";
 import { Header, Card, Container, Image, Icon, Segment } from "semantic-ui-react";
 import logo from "../logo.svg";
 
-export default class UploadCard extends Component {
-  constructor(props: any) {
+interface Props {
+  upload: any;
+}
+
+interface State {
+  selected: Boolean;
+}
+
+export default class UploadCard extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
     this.state = {
-      selected: Boolean,
+      selected: false,
     };
   }
 
-  card_component = (
-    <Card>
-      <Image src={logo} width="250" height="250" />
-      <Card.Content>
-        <Card.Header>Upload Title</Card.Header>
-      </Card.Content>
-      <Card.Content extra>
-        <span className="right floated">Upload Date</span>
-        <span>Username</span>
-      </Card.Content>
-    </Card>
-  );
-
   render() {
     return (
-      <Card.Group doubling itemsPerRow="5" className="link">
-        {this.card_component}
-      </Card.Group>
+      <Card href={"http://127.0.0.1:5000" + this.props.upload.url}>
+        <Image src={logo} />
+        <Card.Content>
+          <Card.Header>{this.props.upload.title}</Card.Header>
+        </Card.Content>
+        <Card.Content extra>
+          <span className="right floated">{this.props.upload.created}</span>
+          <span>{this.props.upload.owner}</span>
+        </Card.Content>
+      </Card>
     );
   }
 }
