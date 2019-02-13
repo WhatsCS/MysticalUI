@@ -1,9 +1,27 @@
 // Actions file, all action signals will be defined and documented here
-import { REQUEST_PAGE, RECIEVE_PAGE, SIGN_OUT } from "./actionTypes";
+import {
+  GET_UPLOADS,
+  REQUEST_PAGE,
+  RECIEVE_PAGE,
+  SIGN_OUT
+} from "./actionTypes";
+
+/* 
+    GetUploads will query the backend and build a collection of all uploads recieved. 
+    Context will be a string specifying either user or main page.
+    Usage: General/Specific Query
+*/
+export const getUploads = (context: string) => ({
+  type: GET_UPLOADS,
+  payload: {
+    context
+  }
+});
+
 /* 
     RequestPage is used to simply tell react that you are requesting a new page.
     Usage: Pagination
- */
+*/
 export const requestPage = (page: number) => ({
   type: REQUEST_PAGE,
   payload: {
