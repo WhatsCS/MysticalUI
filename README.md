@@ -1,4 +1,15 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It's purpose is to be fully independent from the back end, relying on a relatively standard set of API's.
+
+# Current Status
+
+MysticalUI is still very much in the development stages. The current goals are:
+
+- View all Uploads
+- View user specifc Uploads
+- Basic User Control Panel/Profile
+- Basic Admin Control Panel
+
+# Install and Basic Usage
 
 ## Available Scripts
 
