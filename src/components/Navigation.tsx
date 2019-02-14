@@ -11,6 +11,7 @@ export default class NavBar extends Component {
       <Menu borderless fixed="top" fluid>
         <Menu.Item header>MysticalUI</Menu.Item>
         <Menu.Menu borderless position="right">
+          {/* TODO: Added conditional rendering depending on if user is logged in or not. */}
           <Menu.Item header>
             <a href="#">Login</a>
           </Menu.Item>
